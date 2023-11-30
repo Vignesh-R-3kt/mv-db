@@ -27,9 +27,7 @@ export class ApiServicesService {
 
   // searchmovive
   getSearchMovie(data: any): Observable<any> {
-    console.log(data, 'movie#');
-
-    return this.http.get(`${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`);
+    return this.http.get(`${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data}`);
   }
 
   // getmoviedatails

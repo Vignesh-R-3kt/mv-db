@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   trendingData(): void {
     this.api.trendingMovieApiData().subscribe((res: any) => {
       this.trendingResults = res.results;
-      console.log(res);
     })
   }
 
