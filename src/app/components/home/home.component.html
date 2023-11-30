@@ -29,7 +29,8 @@
         <h5 class="text-white">T lorem lorem</h5>
         <div class="rowposter">
             <div class="img-wrapper" *ngFor="let item of trendingResults">
-                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter" alt="">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter" alt=""
+                    [routerLink]="['/movie', item.id]">
             </div>
         </div>
     </div>
