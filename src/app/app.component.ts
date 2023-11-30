@@ -13,7 +13,7 @@ export class AppComponent {
 
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       this.navbg = {
-        background: '#fb2525'
+        background: '#1f1f1f'
       }
     } else {
       this.navbg = {

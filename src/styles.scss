@@ -9,6 +9,7 @@
 
 body {
   background: #1f1f1f;
+  overflow-x: hidden;
 }
 
 ul {
@@ -31,4 +32,8 @@ a {
 
 p {
   color: #ffffff;
+}
+
+img {
+  opacity: 0.1;
 }

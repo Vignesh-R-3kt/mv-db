@@ -1,0 +1,58 @@
+.carousel-inner {
+  height: 100vh;
+  .carousel-item {
+    img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      top: 70%;
+      left: 50%;
+      right: unset;
+      bottom: unset;
+      transform: translateX(-50%);
+
+      h2 {
+        font-weight: 700;
+        color: #e50914;
+      }
+
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.rowposter {
+  display: flex;
+  overflow-x: auto;
+  gap: 7px;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .img-wrapper {
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+}
