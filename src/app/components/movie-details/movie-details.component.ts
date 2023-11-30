@@ -37,13 +37,11 @@ export class MovieDetailsComponent implements OnInit {
           this.movieVideoResult = ele.key;
         }
       })
-      console.log(this.movieVideoResult);
     })
   }
 
   getMovieCast(id: any) {
     this.http.getMovieCast(id).subscribe((res: any) => {
-      console.log("cast", res.cast);
       this.movieCastResult = res.cast;
     })
   }

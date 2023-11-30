@@ -2,7 +2,7 @@
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active" *ngFor="let item of bannerResults; let i = index"
-                [ngClass]="{active : i === 1}" data-bs-interval="10000">
+                [ngClass]="{active : i === 1}" data-bs-interval="1000">
                 <img src="https://image.tmdb.org/t/p/original/{{item.backdrop_path}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption">
                     <h2>{{ item.original_title ? item.original_title : item.name }}</h2>
@@ -24,8 +24,8 @@
 </div>
 
 <!-- Trending  -->
-<div class="container mt-3 p-3">
-    <div class="row">
+<div class="container mt-3 mb-3 p-3">
+    <div class="row" *ngIf="trendingResults.length">
         <h5 class="text-white">T lorem lorem</h5>
         <div class="rowposter">
             <div class="img-wrapper" *ngFor="let item of trendingResults">

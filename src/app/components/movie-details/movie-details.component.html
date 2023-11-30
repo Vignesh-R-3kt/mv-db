@@ -16,7 +16,7 @@
                 <div class="row mt-2">
                     <div class="col-lg-4" *ngFor="let cast of movieCastResult">
                         <div class="row mt-2 mb-2">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4" *ngIf="cast.profile_path">
                                 <img src="https://image.tmdb.org/t/p/original/{{cast?.profile_path}}">
                             </div>
                             <div class="col-lg-8">

@@ -11,13 +11,12 @@ export class AppComponent {
 
   @HostListener('document:scroll') scrollOver() {
 
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       this.navbg = {
         background: '#1f1f1f'
       }
     } else {
       this.navbg = {
-
       }
     }
   }

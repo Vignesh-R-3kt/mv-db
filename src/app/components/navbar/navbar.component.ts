@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+
   @Input() navbg: any;
 }

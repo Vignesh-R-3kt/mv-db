@@ -12,7 +12,7 @@
     </form>
 
     <div class="row mt-5">
-        <div class="col-lg-4" *ngFor="let item of searchResult">
+        <div class="col-lg-4 result-card" *ngFor="let item of searchResult" [routerLink]="['/movie', item.id]">
             <div class="row card-container">
                 <div class="col-lg-3 mt-3 mb-3" *ngIf="item.poster_path">
                     <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="banner-img">

@@ -23,8 +23,6 @@ export class SearchComponent {
     if (inputValue) {
       this.http.getSearchMovie(inputValue).subscribe((res: any) => {
         this.searchResult = res.results;
-        console.log(res.results);
-
       })
     }
   }

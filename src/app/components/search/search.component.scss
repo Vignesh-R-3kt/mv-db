@@ -19,3 +19,12 @@ h5 {
 p {
   color: #ffffff;
 }
+
+.result-card {
+  cursor: pointer;
+  border-radius: 6px;
+
+  &:hover {
+    background: #2d2c2c;
+  }
+}
