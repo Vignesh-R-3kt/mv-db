@@ -1,0 +1,15 @@
+.navbar {
+  transition: background 0.4s ease;
+  .navbar-brand {
+    color: #e50914;
+    font-weight: 700;
+  }
+
+  .nav-link {
+    color: #e50914;
+
+    &.active {
+      color: #cccccc;
+    }
+  }
+}
