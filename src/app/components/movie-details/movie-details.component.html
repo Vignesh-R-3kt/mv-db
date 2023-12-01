@@ -30,4 +30,10 @@
             </div>
         </div>
     </div>
+
+    <div class="p-5 not-found" *ngIf="isValid">
+        <h2 class="text-white"><img src="../../../assets/icons8-not-found-100.png" alt=""> Movie Details Not Available
+        </h2>
+        <a routerLink="/home" class="btn btn-md"> &lt; Go to Home</a>
+    </div>
 </div>

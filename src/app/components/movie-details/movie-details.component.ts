@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { error } from 'jquery';
 import { ApiServicesService } from 'src/app/services/api-services.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class MovieDetailsComponent implements OnInit {
   movieDetailsResult: any;
   movieVideoResult: any;
   movieCastResult: any;
+  isValid: boolean = false;
 
   constructor(private http: ApiServicesService, private router: ActivatedRoute) {
 
@@ -27,6 +29,9 @@ export class MovieDetailsComponent implements OnInit {
   getMovie(id: any) {
     this.http.getMovieDetails(id).subscribe((res: any) => {
       this.movieDetailsResult = res;
+      this.isValid = false;
+    }, (error: any) => {
+      this.isValid = true;
     })
   }
 
