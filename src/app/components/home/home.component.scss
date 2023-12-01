@@ -1,22 +1,37 @@
 .carousel-inner {
   height: 100vh;
   .carousel-item {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(31, 31, 31);
+      background: linear-gradient(
+        0deg,
+        rgba(31, 31, 31, 0.95) 30%,
+        rgba(247, 226, 201, 0) 72%
+      );
+    }
+
     img {
       height: 100vh;
       object-fit: cover;
     }
 
     .carousel-caption {
-      top: 70%;
+      top: 65%;
       left: 50%;
       right: unset;
       bottom: unset;
       transform: translateX(-50%);
+      z-index: 2;
 
       h2 {
         font-weight: 700;
         color: #e50914;
-        background: #1f1f1f30;
         padding: 4px 12px;
         border-radius: 4px;
       }
@@ -26,6 +41,11 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+      }
+
+      a {
+        background: #e50914;
+        color: #ffffff;
       }
     }
   }
